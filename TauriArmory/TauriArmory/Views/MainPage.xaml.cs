@@ -18,11 +18,16 @@ namespace TauriArmory.Views
 			InitializeComponent ();
 		}
 
-        private async void SearchButton_Clicked(object sender, EventArgs e)
+        private async Task SearchButton_Clicked(object sender, EventArgs e)
         {
             string name = textEntry.Text;
             RequestBody request = new RequestBody();
-            CharInfoResponseBody response = await request.GetCharInfoAsync(name);
+            CharInfoResponseBody response = new CharInfoResponseBody();
+            try
+            {
+                response = await request.GetCharInfoAsync(name);
+            }
+            catch (Exception error) { Console.WriteLine(error.Message); }
             fillableName.Text = response.name;
             fillablePts.Text = response.pts.ToString();
             fillableClass.Text = response.Class.ToString();
