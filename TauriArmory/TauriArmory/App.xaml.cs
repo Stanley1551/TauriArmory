@@ -21,11 +21,11 @@ namespace TauriArmory
             {
                 Children =
                 {
-                    new NavigationPage(new ItemsPage())
+                    new NavigationPage(new MainPage())
                     {
-                        Title = "Browse",
-                        Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
-                    },
+                        Title="Character Search"
+                    }
+                    ,
                     new NavigationPage(new AboutPage())
                     {
                         Title = "About",
@@ -33,6 +33,7 @@ namespace TauriArmory
                     },
                 }
             };
+
         }
 	}
 }
