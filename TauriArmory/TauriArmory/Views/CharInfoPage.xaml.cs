@@ -11,16 +11,17 @@ using Xamarin.Forms.Xaml;
 namespace TauriArmory.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : ContentPage
+	public partial class CharInfoPage : ContentPage
 	{
-		public MainPage ()
+		public CharInfoPage (string name)
 		{
 			InitializeComponent ();
+
+            FillFields(name);
 		}
 
-        private async Task SearchButton_Clicked(object sender, EventArgs e)
+        private async Task FillFields(string name)
         {
-            string name = textEntry.Text;
             RequestBody request = new RequestBody();
             CharInfoResponseBody response = new CharInfoResponseBody();
             try
@@ -28,7 +29,6 @@ namespace TauriArmory.Views
                 response = await request.GetCharInfoAsync(name);
             }
             catch (Exception error) { Console.WriteLine(error.Message); }
-            fillableName.Text = response.name;
             fillablePts.Text = response.pts.ToString();
             fillableClass.Text = response.Class.ToString();
             fillableLevel.Text = response.level.ToString();

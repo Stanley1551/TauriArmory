@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 
@@ -9,14 +10,15 @@ namespace TauriArmory.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-            /*TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;*/
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             
             LoadApplication(new App());
+            UserDialogs.Init(this);
         }
     }
 }

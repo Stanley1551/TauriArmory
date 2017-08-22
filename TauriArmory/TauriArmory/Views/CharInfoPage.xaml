@@ -1,34 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TauriArmory.Views.MainPage">
-    <StackLayout>
-        <Entry Placeholder="Character name"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               IsVisible="True"
-               x:Name="textEntry"></Entry>
-        <Button Text="Search"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                x:Name="SearchButton"
-                Clicked="SearchButton_Clicked"></Button>
-        <Label HorizontalOptions="Start"
-               Text="Name"
-               >
-            
-        </Label>
-        <Entry x:Name="fillableName"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalOptions="Center"
-               Placeholder="Character name"
-               ></Entry>
+             x:Class="TauriArmory.Views.CharInfoPage">
+    <StackLayout BackgroundColor="SaddleBrown">
+
+        <Label Text="Character information"
+               FontSize="Large"
+               TextColor="FloralWhite"
+               HorizontalOptions="Center"></Label>
         
         <Label HorizontalOptions="Start"
                Text="Level"
-               >
+               TextColor="FloralWhite">
 
         </Label>
         <Entry x:Name="fillableLevel"
@@ -36,11 +19,11 @@
                VerticalOptions="Center"
                HorizontalTextAlignment="Center"
                Placeholder="Character level"
-               ></Entry>
+               TextColor="FloralWhite"></Entry>
 
         <Label HorizontalOptions="Start"
                Text="Class"
-               >
+               TextColor="FloralWhite">
 
         </Label>
         <Entry x:Name="fillableClass"
@@ -48,18 +31,18 @@
                HorizontalTextAlignment="Center"
                VerticalOptions="Center"
                Placeholder="Character class"
-               ></Entry>
+               TextColor="FloralWhite"></Entry>
 
         <Label HorizontalOptions="Start"
                Text="Achievement points"
-               >
+               TextColor="FloralWhite">
 
         </Label>
         <Entry x:Name="fillablePts"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                Placeholder="Achievement points"
-               ></Entry>
+               TextColor="FloralWhite"></Entry>
 
 
     </StackLayout>

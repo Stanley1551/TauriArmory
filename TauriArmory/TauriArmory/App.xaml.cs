@@ -17,7 +17,7 @@ namespace TauriArmory
 
 		public static void SetMainPage()
 		{
-            Current.MainPage = new TabbedPage
+            /*Current.MainPage = new TabbedPage
             {
                 Children =
                 {
@@ -32,8 +32,9 @@ namespace TauriArmory
                         Icon = Device.OnPlatform<string>("tab_about.png",null,null)
                     },
                 }
-            };
-
+            };*/
+            Current.MainPage = new NavigationPage(new MainMenuPage());
+            
         }
 	}
 }
