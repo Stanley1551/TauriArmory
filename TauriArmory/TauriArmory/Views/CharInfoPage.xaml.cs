@@ -7,6 +7,7 @@ using TauriArmoryAPITest.Responses;
 using TauriArmoryAPITest;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Acr.UserDialogs;
 
 namespace TauriArmory.Views
 {
@@ -22,6 +23,7 @@ namespace TauriArmory.Views
 
         private async Task FillFields(string name)
         {
+            UserDialogs.Instance.ShowLoading("Fetching character data...");
             RequestBody request = new RequestBody();
             CharInfoResponseBody response = new CharInfoResponseBody();
             try
@@ -32,6 +34,8 @@ namespace TauriArmory.Views
             fillablePts.Text = response.pts.ToString();
             fillableClass.Text = response.Class.ToString();
             fillableLevel.Text = response.level.ToString();
+            
+            UserDialogs.Instance.HideLoading();
         }
     }
 }
