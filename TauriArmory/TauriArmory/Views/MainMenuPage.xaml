@@ -2,32 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TauriArmory.Views.MainMenuPage"
-             BackgroundColor="SaddleBrown"
-             >
+             BackgroundColor="AntiqueWhite"
+             NavigationPage.HasNavigationBar="false">
+
+    
     <StackLayout>
-        
+
         <Image
             Source="wowlogo.png"
-            x:Name="HeadLogo"/>
-
-        <Label Text="Tauri Armory"
-               TextColor="DarkBlue"
-               HorizontalTextAlignment="Center"
-               HorizontalOptions="Center"
-               FontSize="Large"/>
+            x:Name="HeadLogo"
+            />
 
         <Label Text="What would you like to look up?"
-               TextColor="DarkBlue"
-               FontSize="Medium"/>
+               TextColor="Coral"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               />
 
-        <Button x:Name="CharSearchButton"
-                Text="Character Info"
-                BackgroundColor="Beige"
-                Clicked="CharSearchButton_Clicked"/>
+        <Button Clicked="CharSearchButton_Clicked"
+                VerticalOptions="Center"
+                BackgroundColor="LawnGreen"
+                
+                Text="Character Info"/>
+
+
 
         <Button x:Name="CharModelButton"
                 Text="Character Model"
-                BackgroundColor="Beige"/>
+                BackgroundColor="LawnGreen"
+                WidthRequest="180"/>
         
     </StackLayout>
 </ContentPage>

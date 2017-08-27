@@ -1,5 +1,5 @@
-﻿using TauriArmory.Views;
-
+﻿using Android.Net;
+using TauriArmory.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,5 +36,6 @@ namespace TauriArmory
             Current.MainPage = new NavigationPage(new MainMenuPage());
             
         }
-	}
+
+    }
 }

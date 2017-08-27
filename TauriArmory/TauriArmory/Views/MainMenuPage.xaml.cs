@@ -19,10 +19,17 @@ namespace TauriArmory.Views
 
         private void CharSearchButton_Clicked(object sender, EventArgs e)
         {
-            string name=string.Empty;
-            Action<PromptResult> SwitchToCharInfoPage = x => Navigation.PushAsync(new CharInfoPage(name));
+            
+            string name = string.Empty;
+            Action<PromptResult> SwitchToCharInfoPage = x =>
+            {
+                if (x.Ok == true)
+                    Navigation.PushAsync(new CharInfoPage(name));
+            };
+            
             Action<PromptTextChangedArgs> UpdateNameString = x => name = x.Value;
-
+            PromptResult result = new PromptResult(true, "Ok");
+            
             PromptConfig prompt = new PromptConfig { Title = "Character name"
                 , CancelText = "Back"
                 , InputType = InputType.Name

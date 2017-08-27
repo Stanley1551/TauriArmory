@@ -1,17 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TauriArmory.Views.CharInfoPage">
-    <StackLayout BackgroundColor="SaddleBrown">
+             x:Class="TauriArmory.Views.CharInfoPage"
+             NavigationPage.BackButtonTitle="Back"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.HasNavigationBar="True"
+             >
+    
+    <StackLayout BackgroundColor="AntiqueWhite">
 
         <Label Text="Character information"
                FontSize="Large"
-               TextColor="FloralWhite"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Center"
+               TextColor="Brown"></Label>
         
         <Label HorizontalOptions="Start"
                Text="Level"
-               TextColor="FloralWhite">
+               TextColor="Brown">
 
         </Label>
         <Entry x:Name="fillableLevel"
@@ -19,11 +24,11 @@
                VerticalOptions="Center"
                HorizontalTextAlignment="Center"
                Placeholder="Character level"
-               TextColor="FloralWhite"></Entry>
+               TextColor="Brown"></Entry>
 
         <Label HorizontalOptions="Start"
                Text="Class"
-               TextColor="FloralWhite">
+               TextColor="Brown">
 
         </Label>
         <Entry x:Name="fillableClass"
@@ -31,18 +36,18 @@
                HorizontalTextAlignment="Center"
                VerticalOptions="Center"
                Placeholder="Character class"
-               TextColor="FloralWhite"></Entry>
+               TextColor="Brown"></Entry>
 
         <Label HorizontalOptions="Start"
                Text="Achievement points"
-               TextColor="FloralWhite">
+               TextColor="Brown">
 
         </Label>
         <Entry x:Name="fillablePts"
                HorizontalOptions="Center"
                VerticalOptions="Center"
                Placeholder="Achievement points"
-               TextColor="FloralWhite"></Entry>
+               TextColor="Brown"></Entry>
 
 
     </StackLayout>
