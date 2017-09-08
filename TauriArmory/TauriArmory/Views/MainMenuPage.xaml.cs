@@ -21,7 +21,7 @@ namespace TauriArmory.Views
         {
             
             string name = string.Empty;
-            Action<PromptResult> SwitchToCharInfoPage = x =>
+            /*Action<PromptResult> SwitchToCharInfoPage = x =>
             {
                 if (x.Ok == true)
                     Navigation.PushAsync(new CharInfoPage(name));
@@ -42,8 +42,18 @@ namespace TauriArmory.Views
                 , OnAction = (SwitchToCharInfoPage)
                 , OnTextChanged = UpdateNameString
                 };
-            UserDialogs.Instance.Prompt(prompt);
-             
+            UserDialogs.Instance.Prompt(prompt);*/
+
+            name = CharacterNameEntry.Text;
+            if (name is null || name.Trim() == "")
+            {
+                UserDialogs.Instance.ShowError("Please enter a valid name.");
+            }
+            else
+            {
+                name = name.Trim();
+                Navigation.PushAsync(new CharInfoPage(name), true);
+            }
         }
 
         

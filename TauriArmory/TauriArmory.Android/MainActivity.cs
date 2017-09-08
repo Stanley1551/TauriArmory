@@ -7,7 +7,7 @@ using System;
 
 namespace TauriArmory.Droid
 {
-    [Activity(Label = "TauriArmory.Android",Icon ="@drawable/ic_launcher", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "TauriArmory.Android",Icon ="@drawable/ic_launcher", Theme = "@style/MyTheme.Base", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public event System.EventHandler Disconnected;

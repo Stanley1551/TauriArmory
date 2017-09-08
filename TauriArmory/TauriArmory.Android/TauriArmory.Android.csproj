@@ -69,8 +69,9 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="TauriArmoryAPITest">
-      <HintPath>C:\Users\Peter\Documents\Visual Studio 2017\Projects\TauriArmoryAPITest\TauriArmoryAPITest\bin\Debug\TauriArmoryAPITest.dll</HintPath>
+    <Reference Include="TauriArmoryAPITest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\TauriArmoryAPITest\TauriArmoryAPITest\bin\Debug\TauriArmoryAPITest.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.4.0.1\lib\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
@@ -134,6 +135,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomRenderer\CharacterNameEntryRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -165,10 +167,10 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\button.png" />
+    <AndroidResource Include="Resources\drawable\rsz_search_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\button_clicked.png" />
+    <AndroidResource Include="Resources\drawable\rsz_user_icon.png" />
   </ItemGroup>
   <Import Project="..\TauriArmory\TauriArmory.projitems" Label="Shared" Condition="Exists('..\TauriArmory\TauriArmory.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
