@@ -34,8 +34,9 @@
             <Image Source="rsz_user_icon"
                    BackgroundColor="AntiqueWhite"
                    Grid.Column="0" Grid.Row="0"
+                   Aspect="AspectFit" Scale="0.65"
                    />
-            
+
             <local:CharacterNameEntry Placeholder="Character name"
                x:Name="CharacterNameEntry"
                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
@@ -47,13 +48,7 @@
                 Image="rsz_search_icon"
                 BackgroundColor="Transparent" BorderColor="Transparent"
                     />
-    </Grid>
-
-
-    <Button x:Name="CharModelButton"
-                Text="Character Model"
-                BackgroundColor="LawnGreen"
-                WidthRequest="180"/>
+        </Grid>
 
     </StackLayout>
     

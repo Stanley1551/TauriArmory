@@ -170,6 +170,12 @@
     <AndroidResource Include="Resources\drawable\rsz_search_icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\alliance_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\horde_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable\rsz_user_icon.png" />
   </ItemGroup>
   <Import Project="..\TauriArmory\TauriArmory.projitems" Label="Shared" Condition="Exists('..\TauriArmory\TauriArmory.projitems')" />

@@ -5,49 +5,102 @@
              NavigationPage.BackButtonTitle="Back"
              NavigationPage.HasBackButton="True"
              NavigationPage.HasNavigationBar="True"
-             >
+             BackgroundColor="AntiqueWhite"
+             BackgroundImage="{Binding FactionLogo}"
+             Title="Character sheet">
     
-    <StackLayout BackgroundColor="AntiqueWhite">
+    <StackLayout BackgroundColor="Transparent"
+                 >
 
-        <Label Text="Character information"
-               FontSize="Large"
-               HorizontalOptions="Center"
-               TextColor="Brown"></Label>
-        
-        <Label HorizontalOptions="Start"
-               Text="Level"
-               TextColor="Brown">
+        <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent" Padding="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
 
-        </Label>
-        <Entry x:Name="fillableLevel"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               HorizontalTextAlignment="Center"
-               Placeholder="Character level"
-               TextColor="Brown"></Entry>
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                   BackgroundColor="#D66E18"
+                   FontSize="Large"
+                   Text="{Binding NameAndTitle}"
+                   TextColor="AntiqueWhite"
+                   x:Name="NameAndTitleLabel"
+                   />
+            <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
+                   Text="{Binding GuildName}"
+                   FontSize="Large"
+                   TextColor="DodgerBlue"
+                   BackgroundColor="Transparent"/>
 
-        <Label HorizontalOptions="Start"
-               Text="Class"
-               TextColor="Brown">
+            <Label Grid.Column="0" Grid.Row="2"
+                   Text="Level"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   BackgroundColor="LightGray"/>
 
-        </Label>
-        <Entry x:Name="fillableClass"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
-               VerticalOptions="Center"
-               Placeholder="Character class"
-               TextColor="Brown"></Entry>
+            <Label Grid.Column="1" Grid.Row="2"
+                   Text="{Binding Level}"
+                    TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightGray"/>
 
-        <Label HorizontalOptions="Start"
-               Text="Achievement points"
-               TextColor="Brown">
+            <Label Grid.Column="0" Grid.Row="3"
+                   Text="Class"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   BackgroundColor="LightSlateGray"/>
 
-        </Label>
-        <Entry x:Name="fillablePts"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               Placeholder="Achievement points"
-               TextColor="Brown"></Entry>
+            <Label Grid.Column="1" Grid.Row="3"
+                   Text="{Binding Class}"
+                    TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightSlateGray"/>
+
+            <Label Grid.Column="0" Grid.Row="4"
+                   Text="Race"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   BackgroundColor="LightGray"/>
+
+            <Label Grid.Column="1" Grid.Row="4"
+                   Text="{Binding Race}"
+                    TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightGray"/>
+
+            <Label Grid.Column="0" Grid.Row="5"
+                   Text="Realm"
+                   VerticalOptions="Center"
+                   TextColor="Black"
+                   BackgroundColor="LightSlateGray"/>
+
+            <Label Grid.Column="1" Grid.Row="5"
+                   Text="{Binding Realm}"
+                    TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightSlateGray"/>
+
+            <Label Grid.Column="0" Grid.Row="6"
+                   Text="Achievement Points"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightGray"/>
+
+            <Label Grid.Column="1" Grid.Row="6"
+                   Text="{Binding Points}"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   BackgroundColor="LightGray"/>
+        </Grid>
 
 
     </StackLayout>

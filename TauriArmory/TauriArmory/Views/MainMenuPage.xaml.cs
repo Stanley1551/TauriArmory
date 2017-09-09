@@ -52,7 +52,23 @@ namespace TauriArmory.Views
             else
             {
                 name = name.Trim();
-                Navigation.PushAsync(new CharInfoPage(name), true);
+                Navigation.PushAsync(new TabbedPage
+                {
+                    BarTextColor = Color.Black,
+
+                    Children =
+                    {
+                        new NavigationPage(new CharInfoPage(name))
+                    {
+                        Title = "Overview", BarTextColor=Color.Black
+                        
+                    },
+                        new NavigationPage(new CharacterModelPage())
+                        {
+                        Title = "Model", BarTextColor=Color.Black
+                        }
+                    }
+                });
             }
         }
 
