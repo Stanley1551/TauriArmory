@@ -52,26 +52,36 @@ namespace TauriArmory.Views
             else
             {
                 name = name.Trim();
+                
                 Navigation.PushAsync(new TabbedPage
                 {
                     BarTextColor = Color.Black,
-
                     Children =
                     {
                         new NavigationPage(new CharInfoPage(name))
                     {
-                        Title = "Overview", BarTextColor=Color.Black
-                        
+                        Title = "Overview", BarTextColor=Color.Black, Tint=Color.Black
+
                     },
                         new NavigationPage(new CharacterModelPage())
                         {
-                        Title = "Model", BarTextColor=Color.Black
+                        Title = "Model", BarTextColor=Color.Black, Tint=Color.Black,
                         }
                     }
                 });
             }
         }
 
-        
+        private void GuildSearchButton_Clicked(object sender, EventArgs e)
+        {
+            if (GuildNameEntry.Text == string.Empty || GuildNameEntry.Text == null)
+            {
+                UserDialogs.Instance.ShowError("Please enter a valid name.");
+            }
+
+            Navigation.PushAsync(new GuildRosterPage(GuildNameEntry.Text));
+        }
+
+
     }
 }

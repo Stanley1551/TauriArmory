@@ -24,6 +24,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50" />
@@ -37,7 +38,7 @@
                    Aspect="AspectFit" Scale="0.65"
                    />
 
-            <local:CharacterNameEntry Placeholder="Character name"
+            <local:NameEntry Placeholder="Character name"
                x:Name="CharacterNameEntry"
                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                TextColor ="Coral"
@@ -45,6 +46,22 @@
 
             <Button Clicked="CharSearchButton_Clicked"
                 Grid.Row="0" Grid.Column="2"
+                Image="rsz_search_icon"
+                BackgroundColor="Transparent" BorderColor="Transparent"
+                    />
+            <Image Source="wow_icon"
+                   BackgroundColor="AntiqueWhite"
+                   Grid.Column="0" Grid.Row="1"
+                   Aspect="AspectFit" Scale="0.65"
+                   />
+            
+            <local:NameEntry Placeholder="Guild name"
+                             x:Name="GuildNameEntry"
+                             Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                             TextColor="Coral"/>
+
+            <Button Clicked="GuildSearchButton_Clicked"
+                Grid.Row="1" Grid.Column="2"
                 Image="rsz_search_icon"
                 BackgroundColor="Transparent" BorderColor="Transparent"
                     />

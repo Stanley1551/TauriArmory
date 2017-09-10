@@ -135,7 +135,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomRenderer\CharacterNameEntryRenderer.cs" />
+    <Compile Include="CustomRenderer\NameEntryRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rsz_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\wow_icon.png" />
   </ItemGroup>
   <Import Project="..\TauriArmory\TauriArmory.projitems" Label="Shared" Condition="Exists('..\TauriArmory\TauriArmory.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

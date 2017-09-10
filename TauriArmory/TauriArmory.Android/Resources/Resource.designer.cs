@@ -2824,11 +2824,11 @@ namespace TauriArmory.Droid
 			// aapt resource value: 0x7f02010d
 			public const int notification_icon_background = 2130837773;
 			
-			// aapt resource value: 0x7f020117
-			public const int notification_template_icon_bg = 2130837783;
-			
 			// aapt resource value: 0x7f020118
-			public const int notification_template_icon_low_bg = 2130837784;
+			public const int notification_template_icon_bg = 2130837784;
+			
+			// aapt resource value: 0x7f020119
+			public const int notification_template_icon_low_bg = 2130837785;
 			
 			// aapt resource value: 0x7f02010e
 			public const int notification_tile_bg = 2130837774;
@@ -2855,7 +2855,10 @@ namespace TauriArmory.Droid
 			public const int slideout = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int wowlogo = 2130837782;
+			public const int wow_icon = 2130837782;
+			
+			// aapt resource value: 0x7f020117
+			public const int wowlogo = 2130837783;
 			
 			static Drawable()
 			{

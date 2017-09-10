@@ -2,7 +2,7 @@
 
 namespace TauriArmory
 {
-    class CharacterNameEntry : Entry
+    class NameEntry : Entry
     {
         
     }
